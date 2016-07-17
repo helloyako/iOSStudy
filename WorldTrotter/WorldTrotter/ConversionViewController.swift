@@ -64,4 +64,23 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
             return true
         }
     }
+    
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+
+        let now = NSDate()
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "HH"
+        let hour: Int = Int(dateFormatter.stringFromDate(now))!
+        
+        switch hour {
+        case 0...6:
+            fallthrough
+        case 18...24:
+            view.backgroundColor = UIColor.darkGrayColor()
+        default:
+            view.backgroundColor = UIColor.whiteColor()
+        }
+    }
 }

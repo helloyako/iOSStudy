@@ -11,6 +11,8 @@
 		A04EA1FE1D37300A00E5ACE1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A04EA1FC1D37300A00E5ACE1 /* Main.storyboard */; };
 		A04EA2001D37300A00E5ACE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A04EA1FF1D37300A00E5ACE1 /* Assets.xcassets */; };
 		A04EA2031D37300A00E5ACE1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A04EA2011D37300A00E5ACE1 /* LaunchScreen.storyboard */; };
+		A087FC131D3CF71D00C9D52F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A087FC121D3CF71D00C9D52F /* MapViewController.swift */; };
+		A087FC151D3D071100C9D52F /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A087FC141D3D071100C9D52F /* WebViewController.swift */; };
 		A0A8F51D1D3900310036D6C1 /* ConversionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A8F51C1D3900310036D6C1 /* ConversionViewController.swift */; };
 		A0F2BDD61D3A0BEA005A77F3 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0F2BDD51D3A0BEA005A77F3 /* MapKit.framework */; };
 /* End PBXBuildFile section */
@@ -22,6 +24,8 @@
 		A04EA1FF1D37300A00E5ACE1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A04EA2021D37300A00E5ACE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A04EA2041D37300A00E5ACE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A087FC121D3CF71D00C9D52F /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		A087FC141D3D071100C9D52F /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		A0A8F51C1D3900310036D6C1 /* ConversionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversionViewController.swift; sourceTree = "<group>"; };
 		A0F2BDD51D3A0BEA005A77F3 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -64,6 +68,8 @@
 				A04EA2011D37300A00E5ACE1 /* LaunchScreen.storyboard */,
 				A04EA2041D37300A00E5ACE1 /* Info.plist */,
 				A0A8F51C1D3900310036D6C1 /* ConversionViewController.swift */,
+				A087FC121D3CF71D00C9D52F /* MapViewController.swift */,
+				A087FC141D3D071100C9D52F /* WebViewController.swift */,
 			);
 			path = WorldTrotter;
 			sourceTree = "<group>";
@@ -140,7 +146,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0A8F51D1D3900310036D6C1 /* ConversionViewController.swift in Sources */,
+				A087FC131D3CF71D00C9D52F /* MapViewController.swift in Sources */,
 				A04EA1F91D37300A00E5ACE1 /* AppDelegate.swift in Sources */,
+				A087FC151D3D071100C9D52F /* WebViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

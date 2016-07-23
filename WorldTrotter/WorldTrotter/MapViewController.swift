@@ -13,14 +13,14 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     var mapView: MKMapView!
     var locationManager: CLLocationManager!
     var currentLocationButton: UIButton!
+    var currentPinIndex = 0
+    var pinCoordinateArray:[CLLocationCoordinate2D]!
     
     
     override func loadView() {
         mapView = MKMapView()
         mapView.delegate = self
         view = mapView
-        
-        
         
         let segmentedControl = UISegmentedControl(items: ["Standard","Hybrid","Satellite"])
         segmentedControl.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.5)
@@ -54,6 +54,23 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         
         buttonBottomConstraint.active = true
         buttonTrailingConstraint.active = true
+        
+        let nextPinButton = UIButton()
+        nextPinButton.setTitle("Next Pin", forState: UIControlState.Normal)
+        nextPinButton.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
+        nextPinButton.addTarget(self, action: #selector(MapViewController.netxPinButtonClick(_:)), forControlEvents: .TouchUpInside)
+        nextPinButton.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(nextPinButton)
+        
+        nextPinButton.bottomAnchor.constraintEqualToAnchor(bottomLayoutGuide.topAnchor).active = true
+        nextPinButton.leadingAnchor.constraintEqualToAnchor(margins.leadingAnchor).active = true
+    }
+    
+    func netxPinButtonClick(button: UIButton) {
+        currentPinIndex = (currentPinIndex % pinCoordinateArray.count)
+        let theRegion:MKCoordinateRegion = MKCoordinateRegionMake(pinCoordinateArray[currentPinIndex], MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
+        self.mapView.setRegion(theRegion, animated: true)
+        currentPinIndex = currentPinIndex + 1
     }
     
     func currentLocationButtonClick(button: UIButton) {
@@ -88,6 +105,41 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
             locationManager.requestAlwaysAuthorization()
             locationManager.startUpdatingLocation()
+            
+            pinCoordinateArray = Array()
+
+            //birth place Pin
+            let birthLatitude: CLLocationDegrees = 37.548056
+            let birthLongitude: CLLocationDegrees = 127.102605
+            let birthCoordinate:CLLocationCoordinate2D = CLLocationCoordinate2DMake(birthLatitude, birthLongitude)
+            let birthPinAnnotation = MKPointAnnotation()
+            birthPinAnnotation.coordinate = birthCoordinate
+            birthPinAnnotation.title = "birth place"
+            self.mapView.addAnnotation(birthPinAnnotation)
+            pinCoordinateArray.append(birthCoordinate)
+            
+            
+            //my location Pin
+            if let location = locationManager.location {
+                let myLatitude: CLLocationDegrees = location.coordinate.latitude
+                let myLongitude: CLLocationDegrees = location.coordinate.longitude
+                let myCoordinate:CLLocationCoordinate2D = CLLocationCoordinate2DMake(myLatitude, myLongitude)
+                let myPinAnnotation = MKPointAnnotation()
+                myPinAnnotation.coordinate = myCoordinate
+                myPinAnnotation.title = "my location"
+                self.mapView.addAnnotation(myPinAnnotation)
+                pinCoordinateArray.append(myCoordinate)
+            }
+            
+            //interesting place pin
+            let interestingLatitude: CLLocationDegrees = 10.308176
+            let interestingLongitude: CLLocationDegrees = 124.020091
+            let interestingCoordinate:CLLocationCoordinate2D = CLLocationCoordinate2DMake(interestingLatitude, interestingLongitude)
+            let interestingPinAnnotation = MKPointAnnotation()
+            interestingPinAnnotation.coordinate = interestingCoordinate
+            interestingPinAnnotation.title = "interesting place"
+            self.mapView.addAnnotation(interestingPinAnnotation)
+            pinCoordinateArray.append(interestingCoordinate)
         }
     }
     

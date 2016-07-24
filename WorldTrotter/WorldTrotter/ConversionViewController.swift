@@ -30,8 +30,8 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func fahrenhitFieldEditingChanged(sender: UITextField) {
-        if let text = sender.text, value = Double(text) {
-            fahrenheitValue = value
+        if let text = sender.text, number = numberFormatter.numberFromString(text) {
+            fahrenheitValue = number.doubleValue
         } else {
             fahrenheitValue = nil
         }
@@ -58,7 +58,10 @@ class ConversionViewController: UIViewController, UITextFieldDelegate {
     }()
     
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
-        if (textField.text?.rangeOfString(".") != nil && string.rangeOfString(".") != nil) || string.rangeOfCharacterFromSet(letterCharacterSet) != nil {
+        let currentLocale = NSLocale.currentLocale()
+        let decimalSeparator = currentLocale.objectForKey(NSLocaleDecimalSeparator) as! String
+        
+        if (textField.text?.rangeOfString(decimalSeparator) != nil && string.rangeOfString(decimalSeparator) != nil) || string.rangeOfCharacterFromSet(letterCharacterSet) != nil {
             return false
         } else {
             return true

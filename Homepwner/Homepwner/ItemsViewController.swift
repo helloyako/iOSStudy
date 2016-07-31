@@ -96,6 +96,10 @@ class ItemsViewController: UITableViewController {
             
         }
     }
+    
+    override func tableView(tableView: UITableView, titleForDeleteConfirmationButtonForRowAtIndexPath indexPath: NSIndexPath) -> String? {
+        return "Remove"
+    }
 
     /*
     // Override to support conditional editing of the table view.

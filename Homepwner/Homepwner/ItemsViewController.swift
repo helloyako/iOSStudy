@@ -20,6 +20,12 @@ class ItemsViewController: UITableViewController {
         let insets = UIEdgeInsets(top: statusBarHeight, left: 0, bottom: 0, right: 0)
         tableView.contentInset = insets
         tableView.scrollIndicatorInsets = insets
+        
+        let backgroundView = UIImageView(image: UIImage(named: "iphone"))
+        
+        backgroundView.frame = tableView.frame
+        tableView.backgroundColor = UIColor.clearColor()
+        tableView.backgroundView = backgroundView
     }
 
     override func didReceiveMemoryWarning() {
@@ -55,12 +61,19 @@ class ItemsViewController: UITableViewController {
             cell.detailTextLabel?.text = "$\(item.valueInDollars)"
         } else {
             let item = itemStore.over50Items[indexPath.row]
-            
             cell.textLabel?.text = item.name
             cell.detailTextLabel?.text = "$\(item.valueInDollars)"
         }
+        
+        cell.textLabel?.font = UIFont.systemFontOfSize(20)
+        cell.detailTextLabel?.font = UIFont.systemFontOfSize(20)
+        cell.backgroundColor = UIColor.clearColor()
 
         return cell
+    }
+    
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 60
     }
  
 

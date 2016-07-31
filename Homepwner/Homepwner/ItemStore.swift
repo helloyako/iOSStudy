@@ -9,18 +9,22 @@
 import Foundation
 
 class ItemStore {
-    var allItems = [Item]()
+    var under50Items = [Item]()
+    var over50Items = [Item]()
     
     init() {
-        for _ in 0..<5 {
+        for _ in 0..<50 {
             createItem()
         }
     }
     
     func createItem() -> Item {
         let newItem = Item(random: true)
-        
-        allItems.append(newItem)
+        if newItem.valueInDollars > 50 {
+            over50Items.append(newItem)
+        } else {
+            under50Items.append(newItem)
+        }
         
         return newItem
     }

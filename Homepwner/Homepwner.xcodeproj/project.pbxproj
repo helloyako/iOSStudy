@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A06FF61A1D56D4DC00F0E6DC /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06FF6191D56D4DB00F0E6DC /* DetailViewController.swift */; };
 		A0A820ED1D57026600FFF833 /* MyUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A820EC1D57026600FFF833 /* MyUITextField.swift */; };
+		A0A820EF1D570FD800FFF833 /* DateChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A820EE1D570FD800FFF833 /* DateChangeViewController.swift */; };
 		A0BE69CB1D4D8E3600C02C2C /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BE69CA1D4D8E3600C02C2C /* ItemsViewController.swift */; };
 		A0BE69CD1D4D8F3200C02C2C /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BE69CC1D4D8F3200C02C2C /* Item.swift */; };
 		A0BE69CF1D4D956400C02C2C /* ItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BE69CE1D4D956400C02C2C /* ItemStore.swift */; };
@@ -22,6 +23,7 @@
 /* Begin PBXFileReference section */
 		A06FF6191D56D4DB00F0E6DC /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		A0A820EC1D57026600FFF833 /* MyUITextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyUITextField.swift; sourceTree = "<group>"; };
+		A0A820EE1D570FD800FFF833 /* DateChangeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateChangeViewController.swift; sourceTree = "<group>"; };
 		A0BE69CA1D4D8E3600C02C2C /* ItemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
 		A0BE69CC1D4D8F3200C02C2C /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		A0BE69CE1D4D956400C02C2C /* ItemStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemStore.swift; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 				A0F407801D50C7AF005B98C8 /* ItemCell.swift */,
 				A06FF6191D56D4DB00F0E6DC /* DetailViewController.swift */,
 				A0A820EC1D57026600FFF833 /* MyUITextField.swift */,
+				A0A820EE1D570FD800FFF833 /* DateChangeViewController.swift */,
 			);
 			path = Homepwner;
 			sourceTree = "<group>";
@@ -154,6 +157,7 @@
 				A0F91D0B1D4C82F900CE20B5 /* AppDelegate.swift in Sources */,
 				A0BE69CD1D4D8F3200C02C2C /* Item.swift in Sources */,
 				A0BE69CF1D4D956400C02C2C /* ItemStore.swift in Sources */,
+				A0A820EF1D570FD800FFF833 /* DateChangeViewController.swift in Sources */,
 				A06FF61A1D56D4DC00F0E6DC /* DetailViewController.swift in Sources */,
 				A0BE69CB1D4D8E3600C02C2C /* ItemsViewController.swift in Sources */,
 				A0F407811D50C7AF005B98C8 /* ItemCell.swift in Sources */,

@@ -150,11 +150,18 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Date Created" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="saI-iL-e5S">
-                                        <rect key="frame" x="0.0" y="114" width="343" height="473"/>
+                                        <rect key="frame" x="0.0" y="114" width="343" height="435"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tod-xM-AkB">
+                                        <rect key="frame" x="0.0" y="557" width="343" height="30"/>
+                                        <state key="normal" title="Change Date"/>
+                                        <connections>
+                                            <segue destination="4Cu-3H-ZfF" kind="show" identifier="DateChange" id="uIm-WP-TCN"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="z16-0w-rAf" firstAttribute="leading" secondItem="0HI-8h-haC" secondAttribute="leading" id="8oz-jx-ojj"/>
@@ -190,6 +197,40 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1778.5" y="673.5"/>
+        </scene>
+        <!--Date Change View Controller-->
+        <scene sceneID="nOA-Y1-lzP">
+            <objects>
+                <viewController id="4Cu-3H-ZfF" customClass="DateChangeViewController" customModule="Homepwner" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="PWg-Or-rt1"/>
+                        <viewControllerLayoutGuide type="bottom" id="Sgt-wZ-JWR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GL8-bx-pmS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="G4d-ML-7tu">
+                                <rect key="frame" x="0.0" y="226" width="375" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="492244872.98944199">
+                                    <!--2016-08-07 06:41:12 +0000-->
+                                </date>
+                            </datePicker>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="G4d-ML-7tu" firstAttribute="centerX" secondItem="GL8-bx-pmS" secondAttribute="centerX" id="lJU-bA-ADD"/>
+                            <constraint firstItem="G4d-ML-7tu" firstAttribute="centerY" secondItem="GL8-bx-pmS" secondAttribute="centerY" id="tNo-22-HvP"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="datePicker" destination="G4d-ML-7tu" id="hb7-jj-Uun"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v23-Yp-yk4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2224.5" y="673.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="UPz-nO-Suw">

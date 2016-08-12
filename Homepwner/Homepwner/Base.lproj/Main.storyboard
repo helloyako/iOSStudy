@@ -90,7 +90,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="7HR-5J-VJs">
-                                <rect key="frame" x="16" y="72" width="343" height="587"/>
+                                <rect key="frame" x="16" y="72" width="343" height="543"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ICn-Gs-7sj">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
@@ -149,24 +149,43 @@
                                             </textField>
                                         </subviews>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Date Created" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="saI-iL-e5S">
-                                        <rect key="frame" x="0.0" y="114" width="343" height="473"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" misplaced="YES" text="Date Created" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="saI-iL-e5S">
+                                        <rect key="frame" x="0.0" y="114" width="343" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="248" verticalCompressionResistancePriority="749" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gHz-yc-nfv">
+                                        <rect key="frame" x="0.0" y="143" width="343" height="401"/>
+                                    </imageView>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="z16-0w-rAf" firstAttribute="leading" secondItem="0HI-8h-haC" secondAttribute="leading" id="8oz-jx-ojj"/>
                                     <constraint firstItem="0HI-8h-haC" firstAttribute="leading" secondItem="D35-Jw-zGq" secondAttribute="leading" id="Hui-39-edM"/>
                                 </constraints>
                             </stackView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8fH-FW-gtW">
+                                <rect key="frame" x="16" y="623" width="343" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="K3R-3m-3KJ"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem systemItem="camera" id="qGa-67-ii6">
+                                        <connections>
+                                            <action selector="takePicture:" destination="D40-uM-y2K" id="VAi-Ng-St3"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="8fH-FW-gtW" secondAttribute="trailing" id="1CX-LZ-PVg"/>
+                            <constraint firstItem="8fH-FW-gtW" firstAttribute="top" secondItem="7HR-5J-VJs" secondAttribute="bottom" constant="8" id="B8Z-lv-gvm"/>
                             <constraint firstItem="7HR-5J-VJs" firstAttribute="top" secondItem="v9Q-Ni-7yO" secondAttribute="bottom" constant="8" id="Ctr-IJ-26e"/>
-                            <constraint firstItem="Rza-9D-8jg" firstAttribute="top" secondItem="7HR-5J-VJs" secondAttribute="bottom" constant="8" id="OR9-Tx-Fo3"/>
+                            <constraint firstItem="Rza-9D-8jg" firstAttribute="top" secondItem="8fH-FW-gtW" secondAttribute="bottom" id="Qgg-Pq-7qk"/>
+                            <constraint firstItem="8fH-FW-gtW" firstAttribute="leading" secondItem="qMB-fC-64E" secondAttribute="leadingMargin" id="mFb-Ig-8wq"/>
                             <constraint firstAttribute="trailingMargin" secondItem="7HR-5J-VJs" secondAttribute="trailing" id="n6e-wz-JB9"/>
                             <constraint firstItem="7HR-5J-VJs" firstAttribute="leading" secondItem="qMB-fC-64E" secondAttribute="leadingMargin" id="nxj-YV-VII"/>
                         </constraints>
@@ -177,6 +196,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="dateLabel" destination="saI-iL-e5S" id="Ge4-IF-hpx"/>
+                        <outlet property="imageView" destination="gHz-yc-nfv" id="nK8-BU-RDz"/>
                         <outlet property="nameField" destination="z16-0w-rAf" id="tiv-CC-a0W"/>
                         <outlet property="serialNumberField" destination="0HI-8h-haC" id="mEM-JC-nfu"/>
                         <outlet property="valueField" destination="D35-Jw-zGq" id="hFl-LG-3M6"/>

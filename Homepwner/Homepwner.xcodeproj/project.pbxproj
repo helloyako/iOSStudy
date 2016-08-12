@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A06FF61A1D56D4DC00F0E6DC /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06FF6191D56D4DB00F0E6DC /* DetailViewController.swift */; };
+		A086E39C1D5DBEF400C24054 /* ImageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A086E39B1D5DBEF400C24054 /* ImageStore.swift */; };
 		A0BE69CB1D4D8E3600C02C2C /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BE69CA1D4D8E3600C02C2C /* ItemsViewController.swift */; };
 		A0BE69CD1D4D8F3200C02C2C /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BE69CC1D4D8F3200C02C2C /* Item.swift */; };
 		A0BE69CF1D4D956400C02C2C /* ItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BE69CE1D4D956400C02C2C /* ItemStore.swift */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		A06FF6191D56D4DB00F0E6DC /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		A086E39B1D5DBEF400C24054 /* ImageStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageStore.swift; sourceTree = "<group>"; };
 		A0BE69CA1D4D8E3600C02C2C /* ItemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
 		A0BE69CC1D4D8F3200C02C2C /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		A0BE69CE1D4D956400C02C2C /* ItemStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemStore.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				A0BE69CE1D4D956400C02C2C /* ItemStore.swift */,
 				A0F407801D50C7AF005B98C8 /* ItemCell.swift */,
 				A06FF6191D56D4DB00F0E6DC /* DetailViewController.swift */,
+				A086E39B1D5DBEF400C24054 /* ImageStore.swift */,
 			);
 			path = Homepwner;
 			sourceTree = "<group>";
@@ -152,6 +155,7 @@
 				A0BE69CF1D4D956400C02C2C /* ItemStore.swift in Sources */,
 				A06FF61A1D56D4DC00F0E6DC /* DetailViewController.swift in Sources */,
 				A0BE69CB1D4D8E3600C02C2C /* ItemsViewController.swift in Sources */,
+				A086E39C1D5DBEF400C24054 /* ImageStore.swift in Sources */,
 				A0F407811D50C7AF005B98C8 /* ItemCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

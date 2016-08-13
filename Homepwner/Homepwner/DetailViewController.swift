@@ -90,7 +90,30 @@ class DetailViewController: UIViewController, UITextFieldDelegate, UINavigationC
         
         imagePicker.allowsEditing = true
         
-        presentViewController(imagePicker, animated: true, completion: nil)
+        let viewContainer = UIView()
+        viewContainer.frame = imagePicker.view.frame
+        
+        let lineLength = 100
+        let lineThickness = 2
+        
+        let horizonView = UIView(frame: CGRect(x: 0, y: 0, width: lineLength, height: lineThickness))
+        horizonView.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.5)
+        
+        
+        let verticalView = UIView(frame: CGRect(x: 0, y: 0, width: lineThickness, height: lineLength))
+        verticalView.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.5)
+        
+        let size = viewContainer.frame.size
+        let point = CGPointMake(size.width / 2, size.height / 2)
+        horizonView.center = point
+        verticalView.center = point
+        
+        viewContainer.addSubview(horizonView)
+        viewContainer.addSubview(verticalView)
+        
+        imagePicker.cameraOverlayView = viewContainer
+        
+        presentViewController(imagePicker, animated: true, completion:nil)
         
     }
     

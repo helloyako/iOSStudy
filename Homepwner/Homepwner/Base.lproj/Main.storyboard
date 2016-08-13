@@ -175,6 +175,11 @@
                                             <action selector="takePicture:" destination="D40-uM-y2K" id="VAi-Ng-St3"/>
                                         </connections>
                                     </barButtonItem>
+                                    <barButtonItem systemItem="trash" id="kee-N3-DyD">
+                                        <connections>
+                                            <action selector="deleteImage:" destination="D40-uM-y2K" id="Izf-lh-2NE"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>

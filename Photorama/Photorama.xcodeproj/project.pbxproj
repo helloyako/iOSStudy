@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A08870751DC70E8D0048FFDF /* PhotoDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08870741DC70E8D0048FFDF /* PhotoDataSource.swift */; };
+		A08870771DC71AFE0048FFDF /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08870761DC71AFE0048FFDF /* PhotoCollectionViewCell.swift */; };
+		A08870791DC734200048FFDF /* PhotoInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08870781DC734200048FFDF /* PhotoInfoViewController.swift */; };
 		A0CBBEF91DC1B6890068BB33 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CBBEF81DC1B6890068BB33 /* AppDelegate.swift */; };
 		A0CBBEFE1DC1B6890068BB33 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0CBBEFC1DC1B6890068BB33 /* Main.storyboard */; };
 		A0CBBF001DC1B6890068BB33 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0CBBEFF1DC1B6890068BB33 /* Assets.xcassets */; };
@@ -18,6 +21,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A08870741DC70E8D0048FFDF /* PhotoDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoDataSource.swift; sourceTree = "<group>"; };
+		A08870761DC71AFE0048FFDF /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		A08870781DC734200048FFDF /* PhotoInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PhotoInfoViewController.swift; path = ../PhotoInfoViewController.swift; sourceTree = "<group>"; };
 		A0CBBEF51DC1B6890068BB33 /* Photorama.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Photorama.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0CBBEF81DC1B6890068BB33 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A0CBBEFD1DC1B6890068BB33 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -60,6 +66,7 @@
 		A0CBBEF71DC1B6890068BB33 /* Photorama */ = {
 			isa = PBXGroup;
 			children = (
+				A08870781DC734200048FFDF /* PhotoInfoViewController.swift */,
 				A0CBBEF81DC1B6890068BB33 /* AppDelegate.swift */,
 				A0CBBEFC1DC1B6890068BB33 /* Main.storyboard */,
 				A0CBBEFF1DC1B6890068BB33 /* Assets.xcassets */,
@@ -69,6 +76,8 @@
 				A0CBBF0E1DC1CBAE0068BB33 /* FlickrAPI.swift */,
 				A0CBBF101DC1D9200068BB33 /* PhotoStore.swift */,
 				A0CBBF121DC1F4C10068BB33 /* Photo.swift */,
+				A08870741DC70E8D0048FFDF /* PhotoDataSource.swift */,
+				A08870761DC71AFE0048FFDF /* PhotoCollectionViewCell.swift */,
 			);
 			path = Photorama;
 			sourceTree = "<group>";
@@ -100,7 +109,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0800;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = helloyako;
 				TargetAttributes = {
 					A0CBBEF41DC1B6890068BB33 = {
@@ -148,6 +157,9 @@
 				A0CBBF0F1DC1CBAE0068BB33 /* FlickrAPI.swift in Sources */,
 				A0CBBF0B1DC1B8E30068BB33 /* PhotosViewController.swift in Sources */,
 				A0CBBF111DC1D9200068BB33 /* PhotoStore.swift in Sources */,
+				A08870751DC70E8D0048FFDF /* PhotoDataSource.swift in Sources */,
+				A08870771DC71AFE0048FFDF /* PhotoCollectionViewCell.swift in Sources */,
+				A08870791DC734200048FFDF /* PhotoInfoViewController.swift in Sources */,
 				A0CBBEF91DC1B6890068BB33 /* AppDelegate.swift in Sources */,
 				A0CBBF131DC1F4C10068BB33 /* Photo.swift in Sources */,
 			);
@@ -193,6 +205,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -243,6 +256,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -311,6 +325,7 @@
 				A0CBBF091DC1B6890068BB33 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

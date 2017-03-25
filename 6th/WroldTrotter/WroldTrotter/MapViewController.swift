@@ -9,8 +9,10 @@
 import UIKit
 import MapKit
 
-class MapViewController: UIViewController {
+class MapViewController: UIViewController, MKMapViewDelegate {
     var mapView: MKMapView!
+    var currentLocationButton: UIButton!
+    var locationManager: CLLocationManager!
     
     override func loadView() {
         mapView = MKMapView()
@@ -34,6 +36,20 @@ class MapViewController: UIViewController {
         topConstraint.isActive = true
         leadingConstraint.isActive = true
         trailingConstraint.isActive = true
+        
+        currentLocationButton = UIButton()
+        currentLocationButton.isEnabled = false
+        currentLocationButton.setTitleColor(#colorLiteral(red: 0.06274510175, green: 0, blue: 0.1921568662, alpha: 1), for: .normal)
+        currentLocationButton.setTitle("Current Location", for: .normal)
+        currentLocationButton.addTarget(self, action: #selector(MapViewController.currentLocationButtonClick(button:)), for: .touchUpInside)
+        currentLocationButton.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(currentLocationButton)
+        
+        let buttonBottomConstraint = currentLocationButton.bottomAnchor.constraint(equalTo: bottomLayoutGuide.topAnchor)
+        let buttonTrailingConstraint = currentLocationButton.trailingAnchor.constraint(equalTo: margin.trailingAnchor)
+        
+        buttonBottomConstraint.isActive = true
+        buttonTrailingConstraint.isActive = true
     }
     
     func mapTypeChanged(_ segControl: UISegmentedControl) {
@@ -48,10 +64,30 @@ class MapViewController: UIViewController {
             break
         }
     }
+    
+    func currentLocationButtonClick(button: UIButton) {
+        if let location = locationManager.location {
+            let center = CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude)
+            let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
+            self.mapView.setRegion(region, animated: true)
+            self.mapView.showsUserLocation = true
+        }
+        
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         print("MapViewController loaded its view.")
+        
+        mapView.delegate = self
+        
+        if (CLLocationManager.locationServicesEnabled()) {
+            locationManager = CLLocationManager()
+        }
+    }
+    
+    func mapViewDidFinishLoadingMap(_ mapView: MKMapView) {
+        currentLocationButton.isEnabled = true
     }
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A022963E1E864E7400B2E6F0 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A022963D1E864E7400B2E6F0 /* WebViewController.swift */; };
 		A09F1D861E826A7200395B80 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A09F1D851E826A7200395B80 /* MapKit.framework */; };
 		A09F1D881E8271C300395B80 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A09F1D871E8271C300395B80 /* MapViewController.swift */; };
 		A0BF5DEE1E7D196F0035F1B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BF5DED1E7D196F0035F1B7 /* AppDelegate.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A022963D1E864E7400B2E6F0 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		A09F1D851E826A7200395B80 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		A09F1D871E8271C300395B80 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		A0BF5DEA1E7D196F0035F1B7 /* WroldTrotter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WroldTrotter.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,6 +120,7 @@
 				A0BF5DF61E7D19700035F1B7 /* LaunchScreen.storyboard */,
 				A0BF5DF91E7D19700035F1B7 /* Info.plist */,
 				A09F1D871E8271C300395B80 /* MapViewController.swift */,
+				A022963D1E864E7400B2E6F0 /* WebViewController.swift */,
 			);
 			path = WroldTrotter;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 				A0BF5DF01E7D196F0035F1B7 /* ConversionViewController.swift in Sources */,
 				A09F1D881E8271C300395B80 /* MapViewController.swift in Sources */,
 				A0BF5DEE1E7D196F0035F1B7 /* AppDelegate.swift in Sources */,
+				A022963E1E864E7400B2E6F0 /* WebViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

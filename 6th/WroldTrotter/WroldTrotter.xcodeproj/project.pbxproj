@@ -42,6 +42,8 @@
 		A03E29191E88B0B900DBB315 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A03E291B1E88B0C300DBB315 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A03E291C1E88B0C400DBB315 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		A03E291D1E88B17100DBB315 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Main.strings; sourceTree = "<group>"; };
+		A03E291E1E88B17100DBB315 /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Localizable.strings; sourceTree = "<group>"; };
 		A09F1D851E826A7200395B80 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		A09F1D871E8271C300395B80 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		A0BF5DEA1E7D196F0035F1B7 /* WroldTrotter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WroldTrotter.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -240,6 +242,7 @@
 				en,
 				Base,
 				es,
+				ko,
 			);
 			mainGroup = A0BF5DE11E7D196F0035F1B7;
 			productRefGroup = A0BF5DEB1E7D196F0035F1B7 /* Products */;
@@ -330,6 +333,7 @@
 				A03E29191E88B0B900DBB315 /* Base */,
 				A03E291B1E88B0C300DBB315 /* en */,
 				A03E291C1E88B0C400DBB315 /* es */,
+				A03E291E1E88B17100DBB315 /* ko */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -340,6 +344,7 @@
 				A0BF5DF21E7D196F0035F1B7 /* Base */,
 				A03E29141E88AE0300DBB315 /* en */,
 				A03E29151E88AE7100DBB315 /* es */,
+				A03E291D1E88B17100DBB315 /* ko */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

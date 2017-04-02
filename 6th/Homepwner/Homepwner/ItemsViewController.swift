@@ -29,18 +29,34 @@ class ItemsViewController: UITableViewController {
 
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return itemStore.allItems.count
+        
+        
+        if section == 0 {
+            return itemStore.lessThan50Items.count
+        } else {
+            return itemStore.anotherItems.count
+        }
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "UITableViewCell", for: indexPath)
         
-        let item = itemStore.allItems[indexPath.row]
+        var item: Item!
+        
+        if indexPath.section == 0 {
+            item = itemStore.lessThan50Items[indexPath.row]
+        } else {
+            item = itemStore.anotherItems[indexPath.row]
+        }
         
         cell.textLabel?.text = item.name
         cell.detailTextLabel?.text = "$\(item.valueInDollars)"
         
         return cell
+    }
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
     }
 }
 

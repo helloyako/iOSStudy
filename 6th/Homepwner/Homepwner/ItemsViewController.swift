@@ -20,6 +20,8 @@ class ItemsViewController: UITableViewController {
         let insets = UIEdgeInsets(top: statusBarHeight, left: 0, bottom: 0, right: 0)
         tableView.contentInset = insets
         tableView.scrollIndicatorInsets = insets
+        tableView.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0)
+        tableView.backgroundView = UIImageView(image:  #imageLiteral(resourceName: "loop_00031"))
     }
 
     override func didReceiveMemoryWarning() {
@@ -52,11 +54,17 @@ class ItemsViewController: UITableViewController {
         cell.textLabel?.text = item.name
         cell.detailTextLabel?.text = "$\(item.valueInDollars)"
         
+        cell.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0)
+        
         return cell
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 2
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 60
     }
 }
 
